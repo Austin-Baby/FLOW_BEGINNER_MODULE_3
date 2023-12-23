@@ -1,0 +1,11 @@
+import Authentication from 0x05
+
+transaction(workerid:String, name:String, age:UInt, account:Address) {
+
+    prepare(signer: AuthAccount) {}
+
+    execute {
+        Authentication.addWorkerss(workerid: workerid, name: name , age: age, account: account)
+        log("We're done.")
+    }
+}
